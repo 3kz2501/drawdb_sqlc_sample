@@ -1,0 +1,867 @@
+{
+  "author": "Unnamed",
+  "title": "Untitled Diagram",
+  "date": "2024-04-13T14:15:16.122Z",
+  "tables": [
+    {
+      "id": 0,
+      "name": "users",
+      "x": 164,
+      "y": 253,
+      "fields": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "\"email\" ~* '^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$'",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 255
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "test comment",
+      "indices": [],
+      "color": "#175e7a"
+    },
+    {
+      "id": 1,
+      "name": "profiles",
+      "x": 163.80577040624996,
+      "y": 514.2017823906249,
+      "fields": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "user_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "profile",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 65535
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 255
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "user_id_name_index",
+          "unique": false,
+          "fields": [
+            "user_id",
+            "name"
+          ]
+        }
+      ],
+      "color": "#175e7a",
+      "key": 1713008830199
+    },
+    {
+      "id": 2,
+      "name": "todos",
+      "x": 51.71235985937483,
+      "y": 1066.6074488593752,
+      "fields": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "note",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 65535,
+          "values": []
+        },
+        {
+          "name": "user_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "parent_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 6,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "expired_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 7,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "priority",
+          "type": "SMALLINT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 8
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "user_id_index",
+          "unique": false,
+          "fields": [
+            "user_id"
+          ]
+        }
+      ],
+      "color": "#175e7a",
+      "key": 1713009319379
+    },
+    {
+      "id": 3,
+      "name": "slack_collaborations",
+      "x": 738.3627068437501,
+      "y": 357.56389095312517,
+      "fields": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "slack_user_id",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "slack_team_id",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 255
+        },
+        {
+          "name": "refresh_token",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 255
+        },
+        {
+          "name": "user_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 6,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "user_id_slack_user_id_index",
+          "unique": false,
+          "fields": [
+            "user_id",
+            "slack_user_id"
+          ]
+        }
+      ],
+      "color": "#175e7a",
+      "key": 1713010783116
+    },
+    {
+      "id": 4,
+      "name": "google_calender_collaborations",
+      "x": 736.2108437656252,
+      "y": 700.7382832343753,
+      "fields": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "user_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "google_usre_id",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 255
+        },
+        {
+          "name": "refresh_token",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 255
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 5,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "user_id_index",
+          "unique": false,
+          "fields": [
+            "user_id"
+          ]
+        }
+      ],
+      "color": "#175e7a",
+      "key": 1713011122539
+    },
+    {
+      "id": 5,
+      "name": "teams",
+      "x": 744.5800623125,
+      "y": 1300.6290414218752,
+      "fields": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "organization_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 4,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [
+        {
+          "id": 0,
+          "name": "organization_id_index",
+          "unique": false,
+          "fields": [
+            "organization_id"
+          ]
+        }
+      ],
+      "color": "#175e7a",
+      "key": 1713016399966
+    },
+    {
+      "id": 6,
+      "name": "organizations",
+      "x": 744.5800623125002,
+      "y": 1021.8891481718754,
+      "fields": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1713016508230
+    },
+    {
+      "id": 7,
+      "name": "team_users",
+      "x": 437.03825625000036,
+      "y": 1067.4523999531255,
+      "fields": [
+        {
+          "name": "id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 0,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "user_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "team_id",
+          "type": "UUID",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1713016576549
+    }
+  ],
+  "relationships": [
+    {
+      "startTableId": 0,
+      "startFieldId": 0,
+      "endTableId": 1,
+      "endFieldId": 1,
+      "cardinality": "One to one",
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "users_id_fk",
+      "id": 0
+    },
+    {
+      "startTableId": 0,
+      "startFieldId": 0,
+      "endTableId": 2,
+      "endFieldId": 3,
+      "cardinality": "One to many",
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "users_id_fk",
+      "id": 1
+    },
+    {
+      "startTableId": 0,
+      "startFieldId": 0,
+      "endTableId": 3,
+      "endFieldId": 4,
+      "cardinality": "One to one",
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "users_id_fk",
+      "id": 2
+    },
+    {
+      "startTableId": 0,
+      "startFieldId": 0,
+      "endTableId": 4,
+      "endFieldId": 1,
+      "cardinality": "One to one",
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "users_id_fk",
+      "id": 3
+    },
+    {
+      "startTableId": 6,
+      "startFieldId": 0,
+      "endTableId": 5,
+      "endFieldId": 4,
+      "cardinality": "One to many",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "organizations_id_fk",
+      "id": 4
+    },
+    {
+      "startTableId": 7,
+      "startFieldId": 2,
+      "endTableId": 5,
+      "endFieldId": 0,
+      "cardinality": "One to one",
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "team_users_team_id_fk",
+      "id": 5
+    },
+    {
+      "startTableId": 0,
+      "startFieldId": 0,
+      "endTableId": 7,
+      "endFieldId": 1,
+      "cardinality": "One to one",
+      "updateConstraint": "Cascade",
+      "deleteConstraint": "Cascade",
+      "name": "users_id_fk",
+      "id": 6
+    }
+  ],
+  "notes": [
+    {
+      "id": 0,
+      "x": 1063.4302115940548,
+      "y": 438.6551877343872,
+      "title": "query.sql for sqlc",
+      "content": "-- name: GetUser :one\nSELECT * FROM users\nWHERE id = $1 LIMIT 1;\n\n-- name: ListUsers :many\nSELECT * FROM users\nORDER BY name;\n\n-- name: CreateUser :one\nBEGIN transaction;\nWITH new_user AS (\n  INSERT INTO users (name, email, created_at)\n  VALUES ($1, $2, NOW())\n  RETURNING id\n)\nINSERT INTO profiles (user_id, profile, name, created_at)\nSELECT id, $3, $4, NOW() FROM new_user;\nCOMMIT transaction;\n\n-- name: CreateTodo :one\nINSERT INTO todos (title, note, user_id, priority, expired_at, created_at)\nVALUES ($1, $2, $3, $4, $5, NOW())\nRETURNING *;\n\n-- name: UpdateTodo :one\nUPDATE todos SET title=$1, note=$2, priority=$3, expired_at=$4, updated_at=NOW()\nWHERE user_id = $5\nRETURNING *;\n\n-- name: DeleteUser :one\nDELETE FROM users\nWHERE id = $1\nRETURNING *;\n\n-- name: CreateTeam :one\nINSERT INTO teams (name, created_at, organization_id)\nVALUEs ($1, NOW(), $2)\nRETURNING *;\n\n-- name: RelationTeamUser :one\nCREATE OR REPLACE FUNCTION insert_team_user(_user_id uuid, _team_id uuid)\nRETURNS VOID AS $$\nBEGIN\n    -- Check if the user exists\n    IF NOT EXISTS (SELECT 1 FROM users WHERE id = _user_id) THEN\n        RAISE EXCEPTION 'User with ID % does not exist', _user_id;\n    END IF;\n\n    -- Check if the team exists\n    IF NOT EXISTS (SELECT 1 FROM teams WHERE id = _team_id) THEN\n        RAISE EXCEPTION 'Team with ID % does not exist', _team_id;\n    END IF;\n\n    -- Insert into the team_users table\n    INSERT INTO team_users (user_id, team_id) \n    VALUES (_user_id, _team_id);\nEND;\n$$ LANGUAGE plpgsql;",
+      "color": "#fcf7ac",
+      "height": 2634
+    }
+  ],
+  "subjectAreas": [
+    {
+      "id": 0,
+      "name": "User",
+      "x": 81.51789590624992,
+      "y": 239.44153025000014,
+      "width": 373.9605849531248,
+      "height": 566.5035498124998,
+      "color": "#175e7a"
+    }
+  ],
+  "types": []
+}
